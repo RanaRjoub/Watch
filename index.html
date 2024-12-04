@@ -4,91 +4,92 @@
 <head>
     <meta charset="utf-8">
     <title>project</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+    <nav class="navBar">
+        <a class="title" href="#">Time Zone</a>
+        
+        <ul class="items">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Shop">Shop</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#Pages">Pages</a></li>
+            <li><a href="#contact">Contact</a></li>
+            
+           
+        </ul>
+       
         </div>
-    </nav>
-    <header >
-        <div class="main" style="background-color: red !important;">
-            <p class="part">
-                <strong> Select Your New <br>
-                    Perfect Style </strong>
-            </p>
+          <ul class="icons">
+            <li><a href="#profile"><i class="fas fa-user"></i> </a></li>
+            <li><a href="#search"><i class="fas fa-search"></i></a></li>
+            <li><a href="#cart"><i class="fas fa-shopping-bag"></i> </a></li>
+          </ul> 
+        <div class="hamburger" onclick="mobileNavBar()">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+        </nav>
+        <div class="menubar">
+          <ul>
+          <li><a href="#Home">Home</a></li>
+            <li><a href="#Shop">Shop</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#Pages">Pages</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+  
+       <header >
+       
+          <div class="text">
+             <h1>
+                Select Your New <br>
+                 Perfect Style 
+            </h1>
             <p>
-                <center>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>Lorem Ipsum has
-                    been the industry's standard</center>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>Lorem Ipsum has
+                    been the industry's standard
             </p>
-            <img src="new editt.webp" alt="problem in image" class="photo">
-
-        </div>
+            <input type="button" value="Shop Now" class="click">
+          </div>
+          <div class="image">
+            <img src="watch.png" alt="problem in image" class="photo">
+          </div>
+         
     </header>
-    <!--
-<div class="base">
-   <img src="new editt.webp" alt="problem in image" class="second">
-  <p class="part">
-   <strong> Select Your New <br>
-    Perfect Style </strong>
-</p>
-<p><center>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>Lorem Ipsum has been the industry's standard</center>
-</p>
-<form >
-    <center>
-<input type="submit" value="shop now" class="shop">
-</center>
-</form>
-</div>
--->
+    <section class="newArrive"> 
+ <h3>New Arrivals</h3>
+ <br>
+ <br>
+   <div class="colection">
+ <img src="watch2.webp">
+ <img src="watch3.png">
+ <img src="watch4.png">
+</div>  
+</section>  
 
+
+   
+  
 
 </body>
+<script >
+  function mobileNavBar()
+  {
+      var hamburger = document.getElementsByClassName("hamburger")[0]; 
+  var menubar = document.getElementsByClassName("menubar")[0]; 
+  hamburger.classList.toggle("hamburger-active");
+  menubar.classList.toggle("active");
+  }
+  
+      </script>
 
 </html>
