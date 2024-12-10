@@ -158,7 +158,7 @@ header {
   box-sizing: border-box; /* يشمل الحشوة داخل العرض */
 }
 .image{
-  overflow:hidden;
+  
   display: flex;
   justify-content:right;
   width:30%;
@@ -188,43 +188,98 @@ letter-spacing: 2px;
   background-color:#000000 ;
   color:white;
 }
-
-section .colection{
-  display: flex;
-  position: relative;
-  position: absolute;
-  left:10%;
-  top:70%;
- 
-}
-.newArrive h3{
-  
+.newArrive 
+{
  display: flex;
- flex-direction:column;
- align-items: center;
- position: absolute;
- left:10%;
- top:70%;
- padding-top:-40px;
+ padding:40px;
+
+} 
+.collection {
+  margin: 20px;
+  display: flex;
+  gap:8rem;
+  flex-wrap: wrap;
+  overflow: hidden;
+
  
 }
 
-.colection{
-  width: 200px;
-  height: 200px;
-  display: flex; 
-  gap:2em;
-  margin-top:60px;
+ .info {
   
+  display: flex;
+  flex-direction: column; 
+ }
+
+.image1 , .image2 , .image3 , .image4 , .image5{
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  object-fit: cover;
+}
+
+.product-name{
+  width: 150px;
+  font-size:15px ;
+  font-weight: bold;
+}
+.product-price{
+  width: 150px;
+  font-size: 15px;
+  color:red;
+  margin-top: 5px;
 
 }
-section img{
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+.product-text{
+  width: 150px;
 }
-/* @media screen and (max-width:768px){
-  .colection img{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* .arrow-right{
+  position:relative;
+  right:40px;
+  height: 120px;
+  border-radius: 100%;
+  cursor: pointer;
+  font-size:40px;
+ 
  
 } */
+ .product-name a{
+   text-decoration: none;
+   color:#16161d;
+ }
+ @media screen and (max-device-width: 768px) {
+  .navBar{
+font-size:20px;
+  }
+  header{
+    height:600px;
+
+  }
+  header img{
+    height:500px;
+    width:300px;
+    position: relative;
+    top:-30px;
+    right:-30px;
+  }
+  .collection {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+      }
+      .image1 , .image2 , .image3 , .image4 , .image5{
+        width:500px;
+        height:500px;
+      }
+      .product-price , .product-name , .product-text{
+        font-size:25px;
+        
+      }
+    
+    .newArrive{
+      display: flex;
+justify-content:  center;
+font-size:40px;
+    }
+   
+  } 
+
+
