@@ -30,7 +30,7 @@ nav .title img {
   width: auto;
   margin-right: 10px;
 }
-nav .title {
+ .title {
   font-size: 1.1rem;
   background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%); /*تنشئ تدرج لوني */ /* to right->اي اتجاه التدرج من اليسار الى اليمين*/
   -webkit-background-clip: text;
@@ -191,16 +191,19 @@ letter-spacing: 2px;
 .newArrive 
 {
  display: flex;
- padding:40px;
-
+ justify-content: center;
+ letter-spacing: 3px;
+ font-size: 40px;
 } 
 .collection {
-  margin: 20px;
+  
   display: flex;
-  gap:8rem;
+  gap:5rem;
   flex-wrap: wrap;
   overflow: hidden;
 
+  justify-content: center;
+ margin-bottom:50px;
  
 }
 
@@ -210,8 +213,8 @@ letter-spacing: 2px;
   flex-direction: column; 
  }
 
-.image1 , .image2 , .image3 , .image4 , .image5{
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+.image1 , .image2 , .image3 , .image4 , .image5 , .image6{
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 10px 24px;
   object-fit: cover;
 }
 
@@ -244,6 +247,66 @@ letter-spacing: 2px;
    text-decoration: none;
    color:#16161d;
  }
+ .Coverhead{
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 35px;
+  
+ }
+ .covers{
+  display: flex;
+  gap:3rem;
+  margin-top: 50px;
+  justify-content: center;
+  margin-bottom: 50px;
+ }
+
+ .cover:hover{
+  transform: scale(1.1); /* تكبير الصورة */
+  filter: brightness(1.2); /* زيادة الإضاءة */
+ }
+ .shop-brand{
+
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 35px;
+ }
+ .brands{
+  display:flex;
+  gap:6%;
+ justify-content: center;
+ margin-bottom: 30px;
+ }
+ .brand:hover{
+  transform: scale(1.1);
+ }
+
+ footer {
+  display: flex;
+  justify-content: right;
+  
+  background-color: #b3aeae; 
+  padding: 20px ;
+  color: white;
+}
+footer .social-media {
+  display: flex;
+  gap: 50px; /* مسافة بين الأيقونات */
+  justify-content: right;
+}
+footer .social-media a {
+  text-decoration: none;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+footer .social-media a img {
+  width: 100%;
+  height: 300px;
+  border-radius: 50%;
+}
+
+ 
  @media screen and (max-device-width: 768px) {
   .navBar{
 font-size:20px;
@@ -261,13 +324,13 @@ font-size:20px;
   }
   .collection {
     display: flex;
-    flex-direction: column; 
+    flex-direction: row; 
     justify-content: center;
     align-items: center;
       }
-      .image1 , .image2 , .image3 , .image4 , .image5{
-        width:500px;
-        height:500px;
+      .image1 , .image2 , .image3 , .image4 , .image5 , .image6{
+        width:300px;
+        height:300px;
       }
       .product-price , .product-name , .product-text{
         font-size:25px;
@@ -279,6 +342,16 @@ font-size:20px;
 justify-content:  center;
 font-size:40px;
     }
+    .covers{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .cover{
+       width:750px;
+       height: 750px;
+    }
+    
    
   } 
 
