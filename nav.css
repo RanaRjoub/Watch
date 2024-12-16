@@ -1,0 +1,301 @@
+nav{
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased; /*   تُستخدم للتحكم في طريقة تنعيم النصوص على محرك WebKit مثل Google Chrome وSafari. */
+    -moz-osx-font-smoothing: grayscale; /*يُستخدم للتحكم في تنعيم النصوص على أجهزة macOS. */
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    padding-top: 60px; 
+  }
+nav{
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased; /*   تُستخدم للتحكم في طريقة تنعيم النصوص على محرك WebKit مثل Google Chrome وSafari. */
+    -moz-osx-font-smoothing: grayscale; /*يُستخدم للتحكم في تنعيم النصوص على أجهزة macOS. */
+  }
+  
+ nav {
+    background-color: #f5f5f5;
+    padding: 5px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+   rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    z-index: 1;
+    position:fixed; 
+    width:100%;
+    top:0;
+  }
+  nav .title {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+   .title {
+   margin-right: 30px;
+    font-size: 1.5rem;
+    background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%); /*تنشئ تدرج لوني */ /* to right->اي اتجاه التدرج من اليسار الى اليمين*/
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+  }
+  
+  
+  nav ul {
+    list-style: none;  
+    display: flex; /*mean that -> flex-direction:row */
+    gap:2%;
+  
+  }
+  nav ul li {
+    margin-left: 1.5rem;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color:#0e0e47;
+    font-size: 95%;
+    font-weight: 550;
+    padding: 4px 8px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+  }
+  .Home {
+    background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%); /*تنشئ تدرج لوني */ /* to right->اي اتجاه التدرج من اليسار الى اليمين*/
+    -webkit-background-clip: text;
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  nav ul li a:hover {
+    background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%); /*تنشئ تدرج لوني */ /* to right->اي اتجاه التدرج من اليسار الى اليمين*/
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  
+  .content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width:200px;
+    height:200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  .content a {
+    color:#0e0e47;
+    padding: 20px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  
+  .content a:hover {
+    background-color: #b3aeae;
+    transition:  1.5s ease-in-out;
+  }
+  
+  .dropdown:hover .content {
+    display: block;
+  }
+  
+  .icons{
+    display:flex;
+    justify-content: flex-end;
+    gap:1em;
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .hamburger .line {
+    width: 25px;
+    height: 1px;
+    background-color: #16161d;
+    display: block;
+    margin: 7px auto;
+    transition: all 0.3s ease-in-out;
+  }
+  .hamburger-active {
+    transition: all 0.3s ease-in-out;
+    transition-delay: 0.6s;
+    transform: rotate(45deg);
+  }
+  
+  .hamburger-active .line:nth-child(2) {
+    width: 0px;
+  }
+  
+  .hamburger-active .line:nth-child(1),
+  .hamburger-active .line:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+  
+  .hamburger-active .line:nth-child(1) {
+    transform: translateY(12px);
+  }
+  
+  .hamburger-active .line:nth-child(3) {
+    transform: translateY(-5px) rotate(90deg);
+  }
+  
+  .menubar {
+    position: absolute;
+    top: 0;
+    left: -60%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    height: 100vh;
+    padding: 20% 0;
+    background: rgba(255, 255, 255);
+    transition: all 0.5s ease-in;
+    z-index: 2;
+  }
+  .active {
+    left: 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  
+  .menubar ul {
+    padding: 0;
+    list-style: none;
+  }
+  .menubar ul li {
+    margin-bottom: 32px;
+  }
+  
+  .menubar ul li a {
+    text-decoration: none;
+    color:#0e0e47;
+    font-size: 95%;
+    font-weight: 400;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .menubar ul li a:hover {
+    background-color: #f5f5f5;
+  }
+  @media screen and (max-width: 790px) {
+    .hamburger {
+      display: block;
+    }
+    nav ul {
+      display: none;
+    }
+  }
+  .Home2{
+    color:#0e0e47;
+  }
+  .Shop{
+    background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%); /*تنشئ تدرج لوني */ /* to right->اي اتجاه التدرج من اليسار الى اليمين*/
+    -webkit-background-clip: text;
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+  }
+  .collection {
+  
+    display: flex;
+    flex-wrap: wrap;
+    gap:6rem;
+    justify-content: center;
+    margin-top: 60px;
+   
+  }
+  .card{
+    display:flex;
+    flex-direction: column;
+    height:300px;
+    justify-content: center;
+  }
+  
+   .info {
+    
+    display: flex;
+    flex-direction: column; 
+   }
+  
+  .image0{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 10px 24px;
+    object-fit: cover;
+    width:100px;
+    text-align:center;
+   
+  }
+  
+  .product-name{
+    width: 150px;
+    font-size:15px ;
+    font-weight: bold;
+    color:#0e0e47;
+  }
+  .product-price{
+    width: 150px;
+    font-size: 15px;
+    color:red;
+    margin-top: 5px;
+  
+  }
+  .product-text{
+    width: 150px;
+    color:#0e0e47;
+  }
+  /* .arrow-right{
+    position:relative;
+    right:40px;
+    height: 120px;
+    border-radius: 100%;
+    cursor: pointer;
+    font-size:40px;
+   
+   
+  } */
+   .product-name a{
+     text-decoration: none;
+     color:#0e0e47;
+   }
+
+   .add{
+     
+    background-color: #f9f9f9;
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+    border:0;
+    gap:5px;
+    color:#0e0e47;
+     background-color: white;
+     box-shadow: #f5f5f5;
+   }
+   .add:hover{
+    border:0.5px;
+    background-color: #b3aeae;
+    
+   }
+.filter{
+    background-color: #b3aeae;
+    width:600px;
+    height:50px;
+    
+}
+
+   
+  

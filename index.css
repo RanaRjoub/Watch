@@ -10,9 +10,11 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Poppins", sans-serif;
+  padding-top: 60px; 
 }
 
  nav {
+  background-color: #f5f5f5;
   padding: 5px 5%;
   display: flex;
   justify-content: space-between;
@@ -20,44 +22,87 @@ body {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
  rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   z-index: 1;
+  position:fixed; 
+  width:100%;
+  top:0;
 }
 nav .title {
   display: flex;
   align-items: center;
 }
-nav .title img {
-  height: 25px;
-  width: auto;
-  margin-right: 10px;
-}
+
+
  .title {
-  font-size: 1.1rem;
+ margin-right: 30px;
+  font-size: 1.5rem;
+  background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%); /*تنشئ تدرج لوني */ /* to right->اي اتجاه التدرج من اليسار الى اليمين*/
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+
+nav ul {
+  list-style: none;  
+  display: flex; /*mean that -> flex-direction:row */
+  gap:2%;
+
+}
+nav ul li {
+  margin-left: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color:#0e0e47;
+  font-size: 95%;
+  font-weight: 550;
+  padding: 4px 8px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+.Home {
+  background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%); /*تنشئ تدرج لوني */ /* to right->اي اتجاه التدرج من اليسار الى اليمين*/
+  -webkit-background-clip: text;
+  background-clip:text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav ul li a:hover {
   background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%); /*تنشئ تدرج لوني */ /* to right->اي اتجاه التدرج من اليسار الى اليمين*/
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-nav ul {
-  list-style: none;  
-  display: flex; /*mean that -> flex-direction:row */
 
+.content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width:200px;
+  height:200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
-nav ul li {
-  margin-left: 1.5rem;
-}
-nav ul li a {
+
+.content a {
+  color:#0e0e47;
+  padding: 20px 16px;
   text-decoration: none;
-  color: #16161d;
-  font-size: 95%;
-  font-weight: 400;
-  padding: 4px 8px;
-  border-radius: 5px;
+  display: block;
+  text-align: center;
 }
 
-nav ul li a:hover {
-  background-color: #f5f5f5;
+.content a:hover {
+  background-color: #b3aeae;
+  transition:  1.5s ease-in-out;
 }
+
+.dropdown:hover .content {
+  display: block;
+}
+
 .icons{
   display:flex;
   justify-content: flex-end;
@@ -129,7 +174,7 @@ nav ul li a:hover {
 
 .menubar ul li a {
   text-decoration: none;
-  color: #000;
+  color:#0e0e47;
   font-size: 95%;
   font-weight: 400;
   padding: 5px 10px;
@@ -156,6 +201,7 @@ header {
   width: 100%; 
  height:400px;
   box-sizing: border-box; /* يشمل الحشوة داخل العرض */
+  color:#0e0e47;
 }
 .image{
   
@@ -169,7 +215,7 @@ header {
 font-size:40px;
 align-self: center;
 text-transform: uppercase;
-letter-spacing: 2px;
+letter-spacing: 3px;
 
 }
 .text p{
@@ -184,9 +230,13 @@ letter-spacing: 2px;
   padding: 10px 20px;
   justify-content: center;
   border-radius: 20px;
-  border-color: #0f0b10;
-  background-color:#000000 ;
+  background-color: #0e0e47; ;
   color:white;
+}
+.click:hover{
+  transition:linear 1.5s;
+  background-color: white;
+  color:#0e0e47;
 }
 .newArrive 
 {
@@ -194,6 +244,7 @@ letter-spacing: 2px;
  justify-content: center;
  letter-spacing: 3px;
  font-size: 40px;
+ color:#0e0e47;
 } 
 .collection {
   
@@ -207,13 +258,13 @@ letter-spacing: 2px;
  
 }
 
- .info {
+ .card {
   
   display: flex;
   flex-direction: column; 
  }
 
-.image1 , .image2 , .image3 , .image4 , .image5 , .image6{
+.image0 {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 10px 24px;
   object-fit: cover;
 }
@@ -232,6 +283,7 @@ letter-spacing: 2px;
 }
 .product-text{
   width: 150px;
+  color:#0e0e47;
 }
 /* .arrow-right{
   position:relative;
@@ -245,13 +297,13 @@ letter-spacing: 2px;
 } */
  .product-name a{
    text-decoration: none;
-   color:#16161d;
+   color:#0e0e47;
  }
  .Coverhead{
   text-align: center;
   letter-spacing: 3px;
   font-size: 35px;
-  
+  color:#0e0e47;
  }
  .covers{
   display: flex;
@@ -270,6 +322,7 @@ letter-spacing: 2px;
   text-align: center;
   letter-spacing: 3px;
   font-size: 35px;
+  color:#0e0e47;
  }
  .brands{
   display:flex;
@@ -282,29 +335,48 @@ letter-spacing: 2px;
  }
 
  footer {
-  display: flex;
-  justify-content: right;
-  
+ width: 100%;
+  height:400px;
   background-color: #b3aeae; 
-  padding: 20px ;
-  color: white;
+  padding-top:60px;
+  color:#0e0e47;
 }
-footer .social-media {
+footer #hopee{
   display: flex;
-  gap: 50px; /* مسافة بين الأيقونات */
-  justify-content: right;
+  padding: 20px;
+  gap:10rem;
 }
-footer .social-media a {
+.Services{
+  list-style: none;
+  margin-left:40px;
+}
+footer #one{
+  font-size:20px;
+  font-weight:600;
+}
+footer li a{
+  color:#0e0e47;
   text-decoration: none;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
 }
-footer .social-media a img {
-  width: 100%;
-  height: 300px;
-  border-radius: 50%;
+footer li a:hover{
+text-decoration: underline;
 }
+ .social-media   {
+ position: absolute;
+ left:25px;
+}
+.X{
+  border-radius: 10px;
+}
+.X ,.insta , .face{
+  margin-left: 20px;
+}
+.follow{
+  margin-left: 20px;
+  letter-spacing: 2px;
+}
+
+
 
  
  @media screen and (max-device-width: 768px) {
@@ -313,7 +385,6 @@ font-size:20px;
   }
   header{
     height:600px;
-
   }
   header img{
     height:500px;
@@ -351,8 +422,48 @@ font-size:40px;
        width:750px;
        height: 750px;
     }
-    
+  footer{
+    height: 500px;
    
-  } 
+  }
+   
+  }  
+  /* ----------------------------------------the first page  ---------------- */
+  .Home2{
+    color:#0e0e47;
+  }
+  .Shop{
+    background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%); /*تنشئ تدرج لوني */ /* to right->اي اتجاه التدرج من اليسار الى اليمين*/
+    -webkit-background-clip: text;
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+  }
+  /* .filter{
+    display: flex;
+    background-color: aliceblue;
+    width:25%;
+    justify-content: center;
+    padding-left:20px;
+    
+  }
+  section{
+   
+  display: flex;
+  padding-top:10px;
+  }
+.category{
+ 
+  border:0.5px solid black;
+  width:400px;
+  margin-bottom: 20px;
+  background-color: #b3aeae;
+  
+}
+.Color ,.Material ,.Brand{
+  
+  font-weight: 500;
+} */
+ 
+ 
 
 
